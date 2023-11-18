@@ -43,7 +43,7 @@ LibDriver SFA30 ist der von LibDriver gestartete Vollfunktionstreiber von SFA30.
 
 ### Installieren
 
-Verweisen Sie auf eine plattformunabhängige IIC, UART-Schnittstellenvorlage und stellen Sie Ihren Plattform-IIC,UART-Treiber fertig.
+Verweisen Sie auf eine plattformunabhängige IIC, UART-Schnittstellenvorlage und stellen Sie Ihren Plattform-IIC, UART-Treiber fertig.
 
 Fügen Sie /src, /interface und /example zu Ihrem Projekt hinzu.
 
