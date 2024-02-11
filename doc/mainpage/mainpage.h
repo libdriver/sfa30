@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver SFA30
- * @brief     libdriver sfa30 is a full function driver of sfa30 and it can run in both MCU and Linux platform.
+ * @brief     LibDriver SFA30 is a full function driver of SFA30 and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
