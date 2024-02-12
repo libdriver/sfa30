@@ -43,11 +43,13 @@ LibDriver SFA30은 LibDriver에서 출시한 SFA30의 전체 기능 드라이버
 
 ### 설치
 
-/interface 디렉토리에서 플랫폼 독립적인 IIC, UART버스 템플릿을 참조하여 지정된 플랫폼에 대한 IIC,UART버스 드라이버를 완성하십시오.
+/interface 디렉토리에서 플랫폼 독립적인 IIC, UART버스 템플릿을 참조하여 지정된 플랫폼에 대한 IIC, UART버스 드라이버를 완성하십시오.
 
 /src 디렉토리, /interface 디렉토리 및 /example 디렉토리를 프로젝트에 추가하십시오.
 
 ### 사용
+
+/example 디렉터리의 예제를 참조하여 자신만의 드라이버를 완성할 수 있습니다. 기본 프로그래밍 예제를 사용하려는 경우 사용 방법은 다음과 같습니다.
 
 #### example basic
 
