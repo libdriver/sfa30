@@ -137,10 +137,10 @@ sfa30: min temperature is 0.0C.
 ```shell
 ./sfa30 -p
 
-sfa30: IIC interface SCL connected to GPIO3(BCM3).
-sfa30: IIC interface SDA connected to GPIO2(BCM2).
-sfa30: UART interface TX connected to GPIO14(BCM14).
-sfa30: UART interface RX connected to GPIO15(BCM15).
+sfa30: IIC interface SCL connected to GPIO3(BCM).
+sfa30: IIC interface SDA connected to GPIO2(BCM).
+sfa30: UART interface TX connected to GPIO15(BCM).
+sfa30: UART interface RX connected to GPIO14(BCM).
 ```
 
 ```shell

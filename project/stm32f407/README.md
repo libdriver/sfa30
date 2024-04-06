@@ -99,8 +99,8 @@ sfa30 -p
 
 sfa30: IIC interface SCL connected to GPIOB PIN8.
 sfa30: IIC interface SDA connected to GPIOB PIN9.
-sfa30: UART interface TX connected to GPIOA PIN2.
-sfa30: UART interface RX connected to GPIOA PIN3.
+sfa30: UART interface TX connected to GPIOA PIN3.
+sfa30: UART interface RX connected to GPIOA PIN2.
 ```
 
 ```shell

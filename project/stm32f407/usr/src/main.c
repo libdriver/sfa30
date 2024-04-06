@@ -320,8 +320,8 @@ uint8_t sfa30(uint8_t argc, char **argv)
         /* print pin connection */
         sfa30_interface_debug_print("sfa30: IIC interface SCL connected to GPIOB PIN8.\n");
         sfa30_interface_debug_print("sfa30: IIC interface SDA connected to GPIOB PIN9.\n");
-        sfa30_interface_debug_print("sfa30: UART interface TX connected to GPIOA PIN2.\n");
-        sfa30_interface_debug_print("sfa30: UART interface RX connected to GPIOA PIN3.\n");
+        sfa30_interface_debug_print("sfa30: UART interface TX connected to GPIOA PIN3.\n");
+        sfa30_interface_debug_print("sfa30: UART interface RX connected to GPIOA PIN2.\n");
         
         return 0;
     }
