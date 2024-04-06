@@ -308,10 +308,10 @@ uint8_t sfa30(uint8_t argc, char **argv)
     else if (strcmp("p", type) == 0)
     {
         /* print pin connection */
-        sfa30_interface_debug_print("sfa30: IIC interface SCL connected to GPIO3(BCM3).\n");
-        sfa30_interface_debug_print("sfa30: IIC interface SDA connected to GPIO2(BCM2).\n");
-        sfa30_interface_debug_print("sfa30: UART interface TX connected to GPIO14(BCM14).\n");
-        sfa30_interface_debug_print("sfa30: UART interface RX connected to GPIO15(BCM15).\n");
+        sfa30_interface_debug_print("sfa30: IIC interface SCL connected to GPIO3(BCM).\n");
+        sfa30_interface_debug_print("sfa30: IIC interface SDA connected to GPIO2(BCM).\n");
+        sfa30_interface_debug_print("sfa30: UART interface TX connected to GPIO15(BCM).\n");
+        sfa30_interface_debug_print("sfa30: UART interface RX connected to GPIO14(BCM).\n");
         
         return 0;
     }
