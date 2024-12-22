@@ -52,7 +52,7 @@ extern "C"{
 
 /**
  * @brief     basic example init
- * @param[in] interface is the chip interface
+ * @param[in] interface chip interface
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -71,7 +71,7 @@ uint8_t sfa30_basic_deinit(void);
 
 /**
  * @brief      basic example read
- * @param[out] *data points to a sfa30_data_t structure
+ * @param[out] *data pointer to a sfa30_data_t structure
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -90,7 +90,7 @@ uint8_t sfa30_basic_reset(void);
 
 /**
  * @brief      basic example get device information
- * @param[out] *info points to a info buffer
+ * @param[out] *info pointer to a info buffer
  * @return     status code
  *             - 0 success
  *             - 1 get device information failed

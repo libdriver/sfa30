@@ -128,96 +128,96 @@ typedef struct sfa30_info_s
 
 /**
  * @brief     initialize sfa30_handle_t structure
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] STRUCTURE is sfa30_handle_t
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] STRUCTURE sfa30_handle_t
  * @note      none
  */
 #define DRIVER_SFA30_LINK_INIT(HANDLE, STRUCTURE)              memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link uart_init function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to a uart_init function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to a uart_init function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_UART_INIT(HANDLE, FUC)              (HANDLE)->uart_init = FUC
 
 /**
  * @brief     link uart_deinit function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to a uart_deinit function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to a uart_deinit function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_UART_DEINIT(HANDLE, FUC)            (HANDLE)->uart_deinit = FUC
 
 /**
  * @brief     link uart_read function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to a uart_read function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to a uart_read function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_UART_READ(HANDLE, FUC)              (HANDLE)->uart_read = FUC
 
 /**
  * @brief     link uart_write function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to a uart_write function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to a uart_write function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_UART_WRITE(HANDLE, FUC)             (HANDLE)->uart_write = FUC
 
 /**
  * @brief     link uart_flush function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to a uart_flush function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to a uart_flush function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_UART_FLUSH(HANDLE, FUC)             (HANDLE)->uart_flush = FUC
 
 /**
  * @brief     link iic_init function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to an iic_init function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to an iic_init function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_IIC_INIT(HANDLE, FUC)               (HANDLE)->iic_init = FUC
 
 /**
  * @brief     link iic_deinit function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to an iic_deinit function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_IIC_DEINIT(HANDLE, FUC)             (HANDLE)->iic_deinit = FUC
 
 /**
  * @brief     link iic_write_cmd function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to an iic_write_cmd function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to an iic_write_cmd function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_IIC_WRITE_COMMAND(HANDLE, FUC)      (HANDLE)->iic_write_cmd = FUC
 
 /**
  * @brief     link iic_read_cmd function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to an iic_read_cmd function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to an iic_read_cmd function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_IIC_READ_COMMAND(HANDLE, FUC)       (HANDLE)->iic_read_cmd = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_DELAY_MS(HANDLE, FUC)               (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to an sfa30 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to an sfa30 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_SFA30_LINK_DEBUG_PRINT(HANDLE, FUC)            (HANDLE)->debug_print = FUC
@@ -235,7 +235,7 @@ typedef struct sfa30_info_s
 
 /**
  * @brief      get chip information
- * @param[out] *info points to an sfa30 info structure
+ * @param[out] *info pointer to an sfa30 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -245,8 +245,8 @@ uint8_t sfa30_info(sfa30_info_t *info);
 
 /**
  * @brief     set the chip interface
- * @param[in] *handle points to an sfa30 handle structure
- * @param[in] interface is the chip interface
+ * @param[in] *handle pointer to an sfa30 handle structure
+ * @param[in] interface chip interface
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -256,8 +256,8 @@ uint8_t sfa30_set_interface(sfa30_handle_t *handle, sfa30_interface_t interface)
 
 /**
  * @brief      get the chip interface
- * @param[in]  *handle points to an sfa30 handle structure
- * @param[out] *interface points to a chip interface buffer
+ * @param[in]  *handle pointer to an sfa30 handle structure
+ * @param[out] *interface pointer to a chip interface buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -267,7 +267,7 @@ uint8_t sfa30_get_interface(sfa30_handle_t *handle, sfa30_interface_t *interface
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an sfa30 handle structure
+ * @param[in] *handle pointer to an sfa30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic or uart initialization failed
@@ -280,7 +280,7 @@ uint8_t sfa30_init(sfa30_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an sfa30 handle structure
+ * @param[in] *handle pointer to an sfa30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic or uart deinit failed
@@ -293,8 +293,8 @@ uint8_t sfa30_deinit(sfa30_handle_t *handle);
 
 /**
  * @brief      read the result
- * @param[in]  *handle points to an sfa30 handle structure
- * @param[out] *data points to an sfa30_data_t structure
+ * @param[in]  *handle pointer to an sfa30 handle structure
+ * @param[out] *data pointer to an sfa30_data_t structure
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -306,7 +306,7 @@ uint8_t sfa30_read(sfa30_handle_t *handle, sfa30_data_t *data);
 
 /**
  * @brief     start the measurement
- * @param[in] *handle points to an sfa30 handle structure
+ * @param[in] *handle pointer to an sfa30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 start measurement failed
@@ -318,7 +318,7 @@ uint8_t sfa30_start_measurement(sfa30_handle_t *handle);
 
 /**
  * @brief     stop the measurement
- * @param[in] *handle points to an sfa30 handle structure
+ * @param[in] *handle pointer to an sfa30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 stop measurement failed
@@ -330,7 +330,7 @@ uint8_t sfa30_stop_measurement(sfa30_handle_t *handle);
 
 /**
  * @brief     reset the chip
- * @param[in] *handle points to an sfa30 handle structure
+ * @param[in] *handle pointer to an sfa30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 reset failed
@@ -342,8 +342,8 @@ uint8_t sfa30_reset(sfa30_handle_t *handle);
 
 /**
  * @brief      get device information
- * @param[in]  *handle points to an sfa30 handle structure
- * @param[out] *info points to an info buffer
+ * @param[in]  *handle pointer to an sfa30 handle structure
+ * @param[out] *info pointer to an info buffer
  * @return     status code
  *             - 0 success
  *             - 1 get device information failed
@@ -366,11 +366,11 @@ uint8_t sfa30_get_device_information(sfa30_handle_t *handle, char info[32]);
 
 /**
  * @brief      set and get the chip register with uart interface
- * @param[in]  *handle points to an sfa30 handle structure
- * @param[in]  *input points to an input buffer
- * @param[in]  in_len is the input length
- * @param[out] *output points to an output buffer
- * @param[in]  out_len is the output length
+ * @param[in]  *handle pointer to an sfa30 handle structure
+ * @param[in]  *input pointer to an input buffer
+ * @param[in]  in_len input length
+ * @param[out] *output pointer to an output buffer
+ * @param[in]  out_len output length
  * @return     status code
  *             - 0 success
  *             - 1 write read failed
@@ -380,10 +380,10 @@ uint8_t sfa30_set_get_reg_uart(sfa30_handle_t *handle, uint8_t *input, uint16_t 
 
 /**
  * @brief     set the chip register with iic interface
- * @param[in] *handle points to an sfa30 handle structure
- * @param[in] reg is the iic register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data buffer length
+ * @param[in] *handle pointer to an sfa30 handle structure
+ * @param[in] reg iic register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data buffer length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -395,10 +395,10 @@ uint8_t sfa30_set_reg_iic(sfa30_handle_t *handle, uint16_t reg, uint8_t *buf, ui
 
 /**
  * @brief      get the chip register with iic interface
- * @param[in]  *handle points to an sfa30 handle structure
- * @param[in]  reg is the iic register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data buffer length
+ * @param[in]  *handle pointer to an sfa30 handle structure
+ * @param[in]  reg iic register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data buffer length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
