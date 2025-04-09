@@ -1,3 +1,9 @@
+## 1.0.7 (2025-04-10)
+
+## Features
+
+- add datasheet
+
 ## 1.0.6 (2025-03-10)
 
 ## Bug Fixes
