@@ -10,7 +10,7 @@
 
 SFA30 is a formaldehyde detection module based on electrochemical sensing technology optimized for lowest false alarm rates. The SFA30 HCHO sensor has a low cross-sensitivity to ethanol and is optimized to operate in the low parts-per-billion (ppb) range to accurately detect low HCHO concentrations around the WHO reference value for indoor exposure.Temperature and humidity compensation via an integrated Sensirion RHT sensor and an integrated microprocessor ensures reliable performance in changing indoor environments. The sensor can withstand adverse environmental conditions during storage, handling and transportation.The robust sensor has a lifetime of 6 years due to its advanced anti-dry technology. Each SFA30 is factory-calibrated and can be easily integrated via I2C or UART interface into your device. The low power consumption allows for battery operation. This makes SFA30 a reliable, easy-to-use and high quality HCHO&RHT combo sensing solution.
 
-LibDriver SFA30 is the full function driver of SFA30 launched by LibDriver. It provides formaldehyde concentration reading, temperature reading, humidity reading, sn reading and other functions. LibDriver is MISRA compliant.
+LibDriver SFA30 is a full-featured driver of SFA30 launched by LibDriver. It provides formaldehyde concentration reading, temperature reading, humidity reading, sn reading and other functions. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
