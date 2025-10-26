@@ -60,7 +60,7 @@ We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g
    sfa30 (-p | --port)
    ```
 
-5. Run sfa30 read test, num means the test times.
+4. Run sfa30 read test, num means the test times.
 
    ```shell
    sfa30 (-t read | --test=read) [--interface=<iic | uart>] [--times=<num>]
