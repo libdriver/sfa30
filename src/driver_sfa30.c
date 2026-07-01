@@ -854,9 +854,9 @@ uint8_t sfa30_read(sfa30_handle_t *handle, sfa30_data_t *data)
         {
             return 1;                                                                                                       /* return error */
         }
-        data->formaldehyde_raw = (uint16_t)(((uint16_t)(out_buf[5 + 0]) << 8) | ((uint16_t)(out_buf[5 + 1]) << 0));         /* copy formaldehyde */
-        data->humidity_raw = (uint16_t)(((uint16_t)(out_buf[5 + 2]) << 8) | ((uint16_t)(out_buf[5 + 3]) << 0));             /* copy humidity */
-        data->temperature_raw = (uint16_t)(((uint16_t)(out_buf[5 + 4]) << 8) | ((uint16_t)(out_buf[5 + 5]) << 0));          /* copy temperature*/
+        data->formaldehyde_raw = (int16_t)(((uint16_t)(out_buf[5 + 0]) << 8) | ((uint16_t)(out_buf[5 + 1]) << 0));          /* copy formaldehyde */
+        data->humidity_raw = (int16_t)(((uint16_t)(out_buf[5 + 2]) << 8) | ((uint16_t)(out_buf[5 + 3]) << 0));              /* copy humidity */
+        data->temperature_raw = (int16_t)(((uint16_t)(out_buf[5 + 4]) << 8) | ((uint16_t)(out_buf[5 + 5]) << 0));           /* copy temperature*/
         data->formaldehyde = (float)(data->formaldehyde_raw) / 5.0f;                                                        /* convert formaldehyde */
         data->humidity = (float)(data->humidity_raw) / 100.0f;                                                              /* convert humidity */
         data->temperature = (float)(data->temperature_raw) / 200.0f;                                                        /* convert temperature*/
@@ -883,9 +883,9 @@ uint8_t sfa30_read(sfa30_handle_t *handle, sfa30_data_t *data)
                 return 1;                                                                                                   /* return error */
             }
         }
-        data->formaldehyde_raw = (uint16_t)(((uint16_t)(buf[0]) << 8) | ((uint16_t)(buf[1]) << 0));                         /* copy formaldehyde */
-        data->humidity_raw = (uint16_t)(((uint16_t)(buf[3]) << 8) | ((uint16_t)(buf[4]) << 0));                             /* copy humidity */
-        data->temperature_raw = (uint16_t)(((uint16_t)(buf[6]) << 8) | ((uint16_t)(buf[7]) << 0));                          /* copy temperature*/
+        data->formaldehyde_raw = (int16_t)(((uint16_t)(buf[0]) << 8) | ((uint16_t)(buf[1]) << 0));                          /* copy formaldehyde */
+        data->humidity_raw = (int16_t)(((uint16_t)(buf[3]) << 8) | ((uint16_t)(buf[4]) << 0));                              /* copy humidity */
+        data->temperature_raw = (int16_t)(((uint16_t)(buf[6]) << 8) | ((uint16_t)(buf[7]) << 0));                           /* copy temperature*/
         data->formaldehyde = (float)(data->formaldehyde_raw) / 5.0f;                                                        /* convert formaldehyde */
         data->humidity = (float)(data->humidity_raw) / 100.0f;                                                              /* convert humidity */
         data->temperature = (float)(data->temperature_raw) / 200.0f;                                                        /* convert temperature*/
