@@ -75,7 +75,7 @@ typedef struct sfa30_data_s
     int16_t temperature_raw;         /**< temperature raw */
     float formaldehyde;              /**< formaldehyde in ppb */
     float humidity;                  /**< humidity in % */
-    float temperature;               /**< humidity in C */
+    float temperature;               /**< temperature in C */
 } sfa30_data_t;
 
 /**
