@@ -687,7 +687,7 @@ uint8_t sfa30_get_device_information(sfa30_handle_t *handle, char info[32])
 
             return 1;                                                                                                     /* return error */
         }
-        if (out_buf[21] != a_sfa30_generate_crc(handle, (uint8_t *)&out_buf[1], 22))                                      /* check crc */
+        if (out_buf[22] != a_sfa30_generate_crc(handle, (uint8_t *)&out_buf[1], 21))                                      /* check crc */
         {
             handle->debug_print("sfa30: crc check error.\n");                                                             /* crc check error */
 
@@ -707,7 +707,7 @@ uint8_t sfa30_get_device_information(sfa30_handle_t *handle, char info[32])
         memset(info, 0, sizeof(char) * 32);                                                                               /* clear info */
         memset(buf, 0, sizeof(uint8_t) * 48);                                                                             /* clear the buffer */
         res = a_sfa30_iic_read(handle, SFA30_ADDRESS, SFA30_IIC_COMMAND_READ_DEVICE_INFORMATION, (uint8_t *)buf,
-                               48, 2);                                                                                    /* read measured values command */
+                               48, 5);                                                                                    /* read measured values command */
         if (res != 0)                                                                                                     /* check result */
         {
             handle->debug_print("sfa30: read measured values failed.\n");                                                 /* read measured values failed */
